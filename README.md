@@ -31,6 +31,7 @@ IMDB names csv: includes information on movie cast and crew members along with a
 Steps to complete:
 
 Cleaning:
+
 Dropping unnecessary columns from each source - streaming csv and movies csv had overlapping/repetitive columns, so we mainly dropped columns from movies csv
 
 Cleaning column names to omit spaces so information smoothly flows to pgAdmin
@@ -58,8 +59,8 @@ Filtered out all movies not currently on one of the streaming platforms through 
 
 Inner join also filters out movies on streaming platforms missing IMDb data or with contradicting title/year information so only exact matches are included
 
-Aggregating
-: 
+Aggregating:
+
 Average IMDb and Rotten Tomatoes ratings calculated after Load step
 
 Can be done either in pgAmin by SQL query or by using Python and SQLalchemy
